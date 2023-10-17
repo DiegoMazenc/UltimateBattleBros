@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Battle Bros</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleMenu.css" />
+  </head>
+
+  <body>
+    <div id="menu">
+      <div class="mode">
+        <div class="modeUn">
+          <div class="JoueurOne"><p>Player 1</p></div>
+
+          <div class="choixUn">
+            <div class="IconbotOne"><img src="bot.png" alt="" /></div>
+            <div class="IconjoueurOne"><img src="J1.png" alt="" /></div>
+          </div>
+          <div class="levelOne">
+            <label for="nbrLvlOne">Level</label>
+            <select name="choiceLevelOne" id="nbrLvlOne">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+        <div class="modeDeux">
+          <div class="choixDeux">
+            <div class="IconbotTwo"><img src="bot.png" alt="" /></div>
+            <div class="IconjoueurTwo"><img src="J2.png" alt="" /></div>
+          </div>
+          <div class="JoueurTwo"><p>Player 2</p></div>
+          <div class="levelTwo">
+            <label for="nbrLvlTwo">Level</label>
+            <select name="choiceLevelTwo" id="nbrLvlTwo">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <div class="life">
+          <p>SURVIE</p>
+          <label for="lifes">Choisissez le nombre de vie</label>
+          <input type="number" id="lifes" min="0" max="100" value="1" />
+        </div>
+        <div class="time">
+          <p>CHRONO</p>
+          <label for="minutes">Choisissez la durée du Chrono</label>
+          <div class="chrono">
+            <input type="number" id="minutes" min="00" max="59" value="02" />
+            <p class="deuxpoints">:</p>
+            <input type="number" id="seconds" min="00" max="59" value="00" />
+          </div>
+        </div>
+      </div>
+      <div class="sousOptions">
+        <div class="pourcentDamages">
+          <label for="nbrdamage">DÉGATS</label>
+          <select name="choiceDamages" id="nbrdamage">
+            <option value="1%">1%</option>
+            <option value="2%">2%</option>
+            <option value="5%" selected>5%</option>
+            <option value="10%">10%</option>
+            <option value="20%">20%</option>
+            <option value="25%">25%</option>
+            <option value="50%">50%</option>
+            <option value="100%">100%</option>
+          </select>
+        </div>
+        <div class="pourcentHeal">
+          <label for="nbrheal">SOINS</label>
+          <select name="choiceheal" id="nbrheal">
+            <option value="5%">5%</option>
+            <option value="10%">10%</option>
+            <option value="15%" selected>15%</option>
+            <option value="20%">20%</option>
+            <option value="25%">25%</option>
+            <option value="50%">50%</option>
+            <option value="100%">100%</option>
+          </select>
+        </div>
+      </div>
+      <button id="startButton" class="startButton">>>START !</button>
+    </div>
+    <div id="game">
+      <div id="chronoGame"></div>
+      <div class="typo">
+        <img src="ready.png" alt="" class="ready animate-typo" />
+        <img src="Go.png" alt="" class="go animate-go" />
+        <img src="game.png" alt="" class="game" />
+      </div>
+      <div class="lightAnim">
+        <img
+          class="lightAnimSizeDroite"
+          id="lightanimImg0"
+          src="lightAnimation/LightAnime12.png"
+          alt=""
+        />
+        <img
+          class="lightAnimSizeDroite"
+          id="lightanimImg"
+          src="lightAnimation/LightAnime10.png"
+          alt=""
+        />
+        <img
+          class="lightAnimSizeDroite"
+          id="lightanimImg2"
+          src="lightAnimation/LightAnime3.png"
+          alt=""
+        />
+      </div>
+      <div class="lightAnimReverse">
+        <img
+          class="lightAnimSizeGauche"
+          id="lightanimImg0Reverse"
+          src="lightAnimation/LightAnime12Reverse.png"
+          alt=""
+        />
+        <img
+          class="lightAnimSizeGauche"
+          id="lightanimImgReverse"
+          src="lightAnimation/LightAnime10Reverse.png"
+          alt=""
+        />
+        <img
+          class="lightAnimSizeGauche"
+          id="lightanimImg2Reverse"
+          src="lightAnimation/LightAnime3Reverse.png"
+          alt=""
+        />
+      </div>
+      <div class="backGroud"></div>
+      <div class="player">
+        <div class="playerOne card">
+          <img
+            src="https://www.gamespot.com/a/uploads/scale_medium/1545/15456196/2761823-supersmashbros_char_20.jpg"
+            alt=""
+          />
+          <div id="optionPlayerOne" class="optionPlayerOne">
+            <p class="plus1One">+1</p>
+            <p class="moins1One">-1</p>
+            <h3 class="nameOne">Player 1</h3>
+
+            <p id="lifeOne">Vies <span class="lifeCountOne">0</span></p>
+
+            <p id="compteurOne">Points <span class="pointCountOne">0</span></p>
+            <div class="hp hpOne">
+              <p class="pv pvFontOne"><span class="nbrPvOne">0</span></p>
+              <div class="hpCursor">
+                <div class="backCursor"></div>
+                <div class="upCursorOne"></div>
+              </div>
+            </div>
+            <div class="action actionOne">
+              <button class="attaque">
+                <span class="btnAttaqueOne">_</span>
+              </button>
+              <button class="heal"><span class="btnHealOne"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="healItem">
+          <img src="itemHeart.png" alt="" />
+          <p class="reduction">-15%</p>
+        </div>
+        <div class="lightAnim">
+          <img src="" alt="" id="lightanimImg" />
+        </div>
+        <div class="playerTwo card">
+          <img
+            src="https://images.nintendolife.com/d0c1ae579a3e6/nintendoswitchsupersmashbrosultimatecharacterart03.large.jpg"
+            alt=""
+          />
+          <div id="optionPlayerTwo" class="optionPlayerTwo">
+            <p class="plus1Two">+1</p>
+            <p class="moins1Two">-1</p>
+
+            <h3 class="nameTwo">Player 2</h3>
+
+            <p id="lifeTwo">Vies <span class="lifeCountTwo">0</span></p>
+
+            <p id="compteurTwo">Points <span class="pointCountTwo">0</span></p>
+            <div class="hp hpTwo">
+              <p class="pv pvFontTwo"><span class="nbrPvTwo">0</span></p>
+              <div class="hpCursor hpCursorTwo">
+                <div class="backCursor"></div>
+                <div class="upCursorTwo"></div>
+              </div>
+            </div>
+            <div class="action actionTwo">
+              <button class="attaque">
+                <span class="btnAttaqueTwo">_</span>
+              </button>
+              <button class="heal"><span class="btnHealTwo"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

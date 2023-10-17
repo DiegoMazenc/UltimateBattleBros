@@ -1,0 +1,688 @@
+#menu {
+  width: 100%;
+  height: 100%;
+  /* background-image: url(https://img.freepik.com/vecteurs-libre/abstrait-futuriste_23-2148403395.jpg?w=1060&t=st=1696767500~exp=1696768100~hmac=65d8dd0f3d98a8e9268252d925a0024383a2d8f45ce2377fefec584a23287bb5); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+}
+
+.mode {
+  display: flex;
+  justify-content: center;
+  margin: 4% 2% 2%;
+}
+
+.modeUn {
+  height: 150px;
+  width: 30%;
+  margin: 0 5%;
+  display: flex;
+  position: relative;
+}
+
+.modeDeux {
+  height: 150px;
+  width: 30%;
+  display: flex;
+  margin: 0 5%;
+  position: relative;
+}
+
+.levelOne {
+  position: absolute;
+  border: 6px solid black;
+  background-color: white;
+  padding: 0 0 0 15px;
+  bottom: -20px;
+  left: -40px;
+  transition: 0.1s;
+
+}
+
+.levelTwo {
+  position: absolute;
+  border: 6px solid black;
+  background-color: white;
+  padding: 0 0 0 15px;
+  bottom: -20px;
+  right: -20px;
+  transition: 0.1s;
+
+}
+
+.levelOne select,
+.levelOne label,
+.levelTwo select,
+.levelTwo label {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.levelOne select,
+.levelTwo select {
+  padding: 0 15px;
+}
+
+.JoueurOne {
+  background-image: url(SamusBleu.png);
+  background-size: cover;
+  width: 80%;
+  border: 5px solid black;
+  border-radius: 40px 0 0 0;
+  position: relative;
+}
+
+.JoueurTwo {
+  background-image: url(LinkRed.png);
+  background-size: cover;
+  background-position-y: -35px;
+  width: 80%;
+  border: 5px solid black;
+  border-radius: 0 40px 0 0;
+
+}
+
+
+.choixUn {
+  position: relative;
+  height: 150px;
+  width: 15%;
+  bottom: -77%;
+  transform: translate(-5px, -50%);
+}
+
+.choixDeux {
+  position: relative;
+  height: 150px;
+  bottom: -40.5px;
+  transform: translateX(5px);
+}
+
+.IconbotOne,
+.IconjoueurOne {
+  height: 30%;
+}
+
+.IconbotTwo,
+.IconjoueurTwo {
+  height: 30%;
+}
+
+.IconbotOne {
+  border: 5px solid black;
+  background-color: #c0c0c0;
+  position: relative;
+  border-radius: 0 15px 0 0;
+  width: 40px;
+  
+}
+
+.IconbotOneHover{
+  background-color: #e0e0e0;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 0;
+  width: 60px;
+}
+
+.IconbotTwo {
+  border: 5px solid black;
+  background-color: #c0c0c0;
+  position: relative;
+  border-radius: 15px 0 0 0;
+  transform: translateX(15px);
+  width: 40px;
+  
+}
+
+.IconbotTwoHover{
+  background-color: #e0e0e0;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  transform: translateX(0px);
+  border-right: 0;
+  width: 60px;
+}
+
+.IconjoueurOne {
+  border: 5px solid black;
+  position: relative;
+  background-color: #4d68fd;
+  border-radius: 0 0 15px 0;
+  width: 40px;
+ 
+}
+
+.IconjoueurOneHover {
+  background-color:#acb8fe;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 0;
+ 
+  width: 60px;
+}
+
+.IconjoueurTwo {
+  background-color: #ff3636;
+  border: 5px solid black;
+  position: relative;
+  border-radius: 0 0 0 15px;
+  transform: translateX(15px);
+  width: 40px;
+  
+}
+
+.IconjoueurTwoHover {
+  background-color:#feacac;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 0;
+  transform: translateX(0px);
+  width: 60px;
+}
+
+.choixUn img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: block;
+  align-items: center;
+  height: 50%;
+}
+
+.choixDeux img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: block;
+  align-items: center;
+  height: 50%;
+}
+
+
+.modeUn p,
+.modeDeux p {
+  font-family: arial black;
+  font-size: 40px;
+}
+
+.JoueurOne p {
+  position: absolute;
+  color: #006aff;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 0px black, -3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black;
+  top: -80px;
+  right: 15px;
+  transform: skewX(-20deg);
+}
+
+.JoueurTwo p {
+  position: absolute;
+  color: #ab0000;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 0px black, -3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black;
+  top: -80px;
+  left: 95px;
+  transform: skewX(-20deg);
+}
+
+
+.life,
+.time {
+  text-align: center;
+  width: 35%;
+  margin: 2% 1%;
+  padding: 2%;
+  border: solid rgb(53, 53, 53) 5px;
+  transform: skewX(-20deg);
+}
+
+.life {
+  border-radius: 100px 0 0 100px;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    rgba(248, 229, 255, 0.5) 56%,
+    rgba(231, 131, 244, 0.5) 56%
+  );
+}
+.lifeHover {
+  background: linear-gradient(
+    0deg,
+    rgba(248, 229, 255, 1) 56%,
+    rgb(231, 131, 244) 56%
+  );
+  border: solid rgb(255, 255, 255) 5px;
+  box-shadow: 2px 2px 4px rgb(231, 131, 244), -2px 2px 4px rgb(231, 131, 244),
+    -2px -2px 4px rgb(231, 131, 244), 2px -2px 4px rgb(231, 131, 244);
+}
+.life:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(248, 229, 255, 1) 56%,
+    rgb(227, 131, 244) 56%
+  );
+}
+
+.time {
+  border-radius: 0 100px 100px 0;
+  background: linear-gradient(
+    0deg,
+    rgba(245, 255, 229, 0.5) 56%,
+    rgba(153, 230, 95, 0.5) 56%
+  );
+}
+.timeHover {
+  background: linear-gradient(
+    0deg,
+    rgba(245, 255, 229, 1) 56%,
+    rgba(153, 230, 95, 1) 56%
+  );
+  border: solid rgb(255, 255, 255) 5px;
+  box-shadow: 2px 2px 4px rgba(153, 230, 95, 1),
+    -2px 2px 4px rgba(153, 230, 95, 1), -2px -2px 4px rgba(153, 230, 95, 1),
+    2px -2px 4px rgba(153, 230, 95, 1);
+}
+.time:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(245, 255, 229, 1) 56%,
+    rgba(153, 230, 95, 1) 56%
+  );
+}
+
+.life input {
+  width: 80px;
+}
+
+.options {
+  width: 76%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    rgba(168, 139, 219, 1) 0%,
+    rgba(187, 130, 232, 1) 25%,
+    rgba(164, 100, 242, 1) 50%,
+    rgba(112, 69, 164, 1) 75%,
+    rgba(104, 39, 181, 1) 100%
+  );
+  margin: 0 11%;
+  border: solid 5px rgb(0, 0, 0);
+  box-shadow: 10px 10px 0 rgb(0, 0, 0);
+  position: relative;
+}
+
+.chrono {
+  display: flex;
+  justify-content: center;
+}
+
+.sousOptions {
+  width: 76%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: solid 5px rgb(0, 0, 0);
+  box-shadow: 10px 10px 0 rgb(0, 0, 0);
+  margin: 0 11%;
+}
+
+.pourcentDamages,
+.pourcentHeal {
+  width: 40%;
+  text-align: center;
+  margin: 2% 0;
+}
+
+.pourcentDamages label,
+.pourcentHeal label {
+  width: 40%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 100px;
+  color: rgb(30, 30, 30);
+  font-size: 20px;
+}
+
+.life p,
+.time p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  margin-top: 0;
+  transform: skewX(10deg);
+}
+
+.life label,
+.time label {
+  display: block;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.startButton {
+  border: none;
+  display: block;
+  position: absolute;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  color: rgb(180, 180, 180);
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: 4px 4px 0px black, -4px 4px 0px black, -4px -4px 0px black,
+    4px -4px 0px black;
+  transform: skew(-20deg) translate(-50%, 0%);
+  transition: 0.1s;
+  margin: 0;
+  top: 30px;
+}
+
+.startButtonActive {
+  border: none;
+  display: block;
+  position: absolute;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  color: rgb(255, 149, 0);
+  -webkit-text-stroke: 2px black;
+  text-shadow: 4px 4px 0px yellow, -4px 4px 0px yellow, -4px -4px 0px yellow,
+    4px -4px 0px yellow;
+  transform: skew(-20deg) translate(-50%, 0%);
+  transition: 0.1s;
+  margin: 0;
+  top: 30px;
+}
+
+.startButtonActiveHover {
+  font-size: 60px;
+  color: rgb(255, 149, 0);
+  text-shadow: 4px 4px 0px yellow, -4px 4px 0px yellow, -4px -4px 0px yellow,
+    4px -4px 0px yellow;
+  -webkit-text-stroke: 2.5px black;
+}
+
+input,
+select {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: arial black;
+  font-size: 40px;
+}
+.deuxpoints {
+  margin: 0 10px 10px 0;
+}
+
+.lightAnimSizeDroite {
+  position: absolute;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  right: -50%;
+  top: 25%;
+  z-index: 1;
+  transition: 1s;
+  height: 0;
+}
+
+.lightAnimSizeGauche {
+  position: absolute;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  top: 25%;
+  z-index: 1;
+  transition: 1s;
+  height: 0;
+}
+
+.animate-dead-light {
+  animation-name: animationLight;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationLight {
+  0% {
+    right: -100%;
+    height: 0;
+    opacity: 1;
+  }
+  10% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  15% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  30% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  45% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  60% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  75% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  90% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+  100% {
+    right: -80%;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-dead-light2 {
+  animation-name: animationLight2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationLight2 {
+  0% {
+    right: -100%;
+    height: 0;
+    opacity: 1;
+  }
+  10% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  15% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  30% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  45% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+  60% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  75% {
+    right: -50%;
+    height: 50%;
+    opacity: 1;
+  }
+  90% {
+    right: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+  100% {
+    right: -80%;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-dead-light-reverse {
+  animation-name: animationLightReverse;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationLightReverse {
+  0% {
+    left: -75%;
+    height: 0;
+    opacity: 1;
+  }
+  10% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  15% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  30% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  45% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  60% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  75% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  90% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+  100% {
+    right: 0%;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-dead-light2-reverse {
+  animation-name: animationLight2Reverse;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animationLight2Reverse {
+  0% {
+    right: -100%;
+    height: 0;
+    opacity: 1;
+  }
+  10% {
+    left: -75%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  15% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+
+  30% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  45% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+  60% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+
+  75% {
+    left: 25%;
+    height: 50%;
+    opacity: 1;
+  }
+  90% {
+    left: 0%;
+    height: 150%;
+    opacity: 1;
+  }
+  100% {
+    left: 0%;
+    height: 0;
+    opacity: 0;
+  }
+}
